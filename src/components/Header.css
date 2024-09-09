@@ -1,0 +1,135 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+  background-color: #1b263b; /* Dark blue background */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fixed position at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it is on top of other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for a subtle effect */
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* Regular Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 5px;
+  margin-left: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #219ebc;
+  color: #023e8a;
+  border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+  display: none; /* Hide dropdown by default */
+  position: relative;
+  padding-right: 0; /* Remove right padding */
+  width: 90%; /* Ensure the button takes full width */
+}
+
+.dropdown-toggle {
+  background-color: #219ebc;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Full width button */
+  text-align: center; /* Center text in the button */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #023e8a;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0; /* Remove padding to prevent overflow */
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  width: 100%; /* Full-width dropdown */
+  overflow: hidden;
+}
+
+.dropdown-link {
+  text-decoration: none;
+  color: #03045e;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%; /* Ensure link spans full width */
+  text-align: left; /* Align text to the left */
+}
+
+.dropdown-link:hover {
+  background-color: #eeeeee;
+  color: #023e8a;
+}
+
+/* Responsive Design */
+
+/* Small devices (phones, up to 576px) */
+@media (max-width: 576px) {
+  .nav-links {
+    display: none; /* Hide regular links on small screens */
+  }
+
+  .dropdown-container {
+    display: block; /* Show dropdown button on small screens */
+  }
+
+  .dropdown-toggle {
+    width: 100%; /* Full-width button on small screens */
+  }
+
+  .dropdown-content {
+    width: 100%; /* Full-width dropdown items */
+    right: 0; /* Adjust dropdown position */
+    margin: 0; /* Remove margin to fit in the viewport */
+  }
+}
+
+/* Other responsive rules remain unchanged */

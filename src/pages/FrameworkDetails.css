@@ -1,0 +1,52 @@
+.framework-container {
+    max-width: 100%; /* Allows the container to take 90% of the viewport width */
+    margin: auto; /* Centers the container */
+    line-height: 1.6;
+    text-align: center; /* Center-aligns text inside the container */
+    border-radius: 10px; /* Optional: Rounds the container edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Adds a subtle shadow effect */
+  }
+  
+  .framework-container h2{
+    color: #eee6e6;
+    margin-bottom: 15px;
+    font-size: medium;
+    background-color: #003049;
+    padding: 0px; /* Adds padding for better readability */
+  }
+  
+  .framework-container ul, .framework-container ol {
+    margin-left: 20px;
+    text-align: left; /* Keeps list items aligned left */
+  }
+  
+  .framework-container li {
+    margin-bottom: 10px;
+  }
+  
+  .framework-image {
+    width: 90%; /* Sets the image to occupy 90% of the container width */
+    max-width: 90vw; /* Ensures the image does not exceed the viewport width */
+    margin: 20px 0;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for a page effect */
+  }
+
+  a {
+    text-decoration: none; /* Remove underline from the link */
+    color: #1b263b; /* Default text color */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  a:hover:after {
+    color: #ffd900; /* Change text color on hover */
+  }
+
+  .framework-container h3{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #03045e;
+    color: aliceblue;
+    padding-bottom: 20px;
+    font-size: 30px;
+
+  }
