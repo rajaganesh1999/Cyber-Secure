@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Header.css';
 
 const Header = () => {
@@ -7,15 +7,15 @@ const Header = () => {
 
   // Function to toggle dropdown
   const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
+    setDropdownOpen(prev => !prev);
   };
 
   // Function to close dropdown when clicking outside
-  const handleClickOutside = (event) => {
+  const handleClickOutside = useCallback((event) => {
     if (!event.target.closest('.dropdown-container') && isDropdownOpen) {
       setDropdownOpen(false);
     }
-  };
+  }, [isDropdownOpen]);
 
   // Add event listener for clicks outside
   useEffect(() => {
@@ -23,7 +23,7 @@ const Header = () => {
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [isDropdownOpen]);
+  }, [handleClickOutside]);
 
   return (
     <header>
