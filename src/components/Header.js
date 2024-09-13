@@ -1,16 +1,21 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-const Header = () => {
+function ColorSchemesExample() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
+        {/* Brand with React Router Link */}
         <Navbar.Brand as={Link} to="/">Cyber Secure Mindset</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto"> {/* Align navigation links to the right */}
+        {/* Toggle button for mobile view */}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/* Collapsible Navbar Content */}
+        <Navbar.Collapse id="basic-navbar-nav">
+          {/* Left-aligned navigation links */}
+          <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/framework">Framework</Nav.Link>
             <Nav.Link as={Link} to="/scams">Scams Awareness</Nav.Link>
@@ -20,6 +25,6 @@ const Header = () => {
       </Container>
     </Navbar>
   );
-};
+}
 
-export default Header;
+export default ColorSchemesExample;
