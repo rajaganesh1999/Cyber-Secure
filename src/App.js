@@ -7,8 +7,8 @@ import FrameworkDetails from './pages/FrameworkDetails';
 import ScamsAwareness from './pages/ScamsAwareness';
 import Contact from './pages/Contact';
 import Header from './components/Header';
-import Nav  from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
