@@ -14,8 +14,8 @@ function ColorSchemesExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         {/* Collapsible Navbar Content */}
         <Navbar.Collapse id="basic-navbar-nav">
-          {/* Left-aligned navigation links */}
-          <Nav className="me-auto">
+          {/* Right-aligned navigation links */}
+          <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/framework">Framework</Nav.Link>
             <Nav.Link as={Link} to="/scams">Scams Awareness</Nav.Link>
